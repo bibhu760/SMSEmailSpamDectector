@@ -9,9 +9,15 @@ import nltk
 nltk.download('punkt')
 nltk.download('wordnet')
 nltk.download('omw-1.4')  # Open Multilingual Wordnet
-import nltk
+
 print(nltk.data.path)
 nltk.data.path.append('/path/to/nltk_data')
+
+try:
+    from nltk.corpus import wordnet as wn
+except LookupError:
+    nltk.download('wordnet')
+    from nltk.corpus import wordnet as wn
 
 
 tfidf= pickle.load(open('vectorizer.pkl','rb'))
