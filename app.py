@@ -8,7 +8,7 @@ import nltk
 
 nltk.download('stopwords')
 nltk.download('punkt')
-nltk.download('words')
+nltk.download('wordnet')
 
 
 tfidf= pickle.load(open('vectorizer.pkl','rb'))
