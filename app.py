@@ -7,12 +7,6 @@ from nltk.stem.porter import PorterStemmer
 import nltk
 from nltk.corpus import wordnet
 
-nltk.download('punkt')
-nltk.download('wordnet')
-nltk.download('omw-1.4')  # Open Multilingual Wordnet
-
-
-
 
 tfidf= pickle.load(open('vectorizer.pkl','rb'))
 model= pickle.load(open('model.pkl','rb'))
